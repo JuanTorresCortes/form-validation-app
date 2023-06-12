@@ -204,10 +204,19 @@ function Form() {
       </form>
 
         {/* display error and success messages */}
-      {nameError && <p>{nameError}</p>}
-      {passwordError && <p>{passwordError}</p>}
-      {emailError && <p>{emailError}</p>}
-
+        <div>
+            <ul>
+                <h3>Requirements</h3>
+                <li>Name must not contain any numbers and must be grater than (1) single character.</li>
+                <li>Email must contain at bare minimum an (@) and (.).</li>
+                <li>Password must be longer than (6) characters long but may not excide (12) characters.</li>
+            </ul>
+            <hr />
+            {nameError && <h4>{nameError}</h4>}
+            {emailError && <h4>{emailError}</h4>}
+            {passwordError && <h4>{passwordError}</h4>}
+            <hr />
+        </div>
 
     </div>
   );
